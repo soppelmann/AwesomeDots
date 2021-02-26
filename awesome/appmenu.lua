@@ -3,7 +3,7 @@ local appmenu = {}
 appmenu.Accessories = {
     { 'Bulk Rename', 'thunar --bulk-rename', '/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png' },
     { 'Code - OSS', '/usr/lib/code-oss/bin/code-oss --no-sandbox --unity-launch' },
-    { 'Micro', 'xterm -e micro' },
+    { 'Kvantum Manager', 'kvantummanager', '/usr/share/icons/hicolor/scalable/apps/kvantum.svg' },
     { 'Mousepad', 'mousepad', '/usr/share/icons/hicolor/48x48/apps/org.xfce.mousepad.png' },
     { 'Neovim', 'xterm -e nvim' },
     { 'Thunar File Manager', 'thunar', '/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png' },
@@ -18,7 +18,6 @@ appmenu.Development = {
     { 'Emacs', '/bin/emacs' },
     { 'Geany', 'geany', '/usr/share/icons/hicolor/48x48/apps/geany.png' },
     { 'IntelliJ IDEA Ultimate Edition', '"/opt/idea/idea-IU-202.7660.26/bin/idea.sh"', '/opt/idea/idea-IU-202.7660.26/bin/idea.svg' },
-    { 'Micro', 'xterm -e micro' },
     { 'Qt5 Assistant', '/usr/bin/assistant-qt5', '/usr/share/icons/hicolor/32x32/apps/assistant-qt5.png' },
     { 'Qt5 Designer', '/usr/bin/designer-qt5', '/usr/share/icons/hicolor/128x128/apps/designer-qt5.png' },
     { 'Qt5 Linguist', '/usr/bin/linguist-qt5', '/usr/share/icons/hicolor/48x48/apps/linguist-qt5.png' },
@@ -44,6 +43,7 @@ appmenu.Internet = {
     { 'Chromium', 'chromium', '/usr/share/icons/hicolor/256x256/apps/chromium.png' },
     { 'Connman UI Setup', 'cmst', '/usr/share/icons/hicolor/36x36/apps/cmst.png' },
     { 'Firefox Web Browser', 'firefox', '/usr/share/icons/hicolor/256x256/apps/firefox.png' },
+    { 'HexChat', 'hexchat --existing', '/usr/share/icons/hicolor/48x48/apps/hexchat.png' },
     { 'Telegram Desktop', 'telegram-desktop --', '/usr/share/icons/hicolor/256x256/apps/telegram.png' },
     { 'Transmission', 'transmission-gtk', '/usr/share/icons/hicolor/scalable/apps/transmission.svg' },
     { 'qBittorrent', 'qbittorrent', '/usr/share/icons/hicolor/36x36/apps/qbittorrent.png' },
@@ -55,13 +55,20 @@ appmenu.Office = {
     { 'Zathura', 'zathura', '/usr/share/icons/hicolor/256x256/apps/org.pwmt.zathura.png' },
 }
 
+appmenu.Multimedia = {
+    { 'PulseAudio Volume Control', 'pavucontrol-qt', '/usr/share/icons/Adwaita/256x256/legacy/multimedia-volume-control.png' },
+}
+
 appmenu.Settings = {
     { 'ARandR', 'arandr' },
     { 'Connman UI Setup', 'cmst', '/usr/share/icons/hicolor/36x36/apps/cmst.png' },
     { 'Customize Look and Feel', 'lxappearance', '/usr/share/icons/Adwaita/256x256/legacy/preferences-desktop-theme.png' },
     { 'File Manager Settings', 'thunar-settings', '/usr/share/icons/hicolor/48x48/apps/org.xfce.thunar.png' },
+    { 'Kvantum Manager', 'kvantummanager', '/usr/share/icons/hicolor/scalable/apps/kvantum.svg' },
     { 'Power Manager', 'xfce4-power-manager-settings', '/usr/share/icons/hicolor/48x48/apps/org.xfce.powermanager.png' },
+    { 'Qt5 Settings', 'qt5ct', '/usr/share/icons/Adwaita/256x256/legacy/preferences-desktop-theme.png' },
     { 'Screensaver', 'xscreensaver-demo' },
+    { 'Theme Configuration', 'gtk-theme-config', '/usr/share/icons/hicolor/scalable/apps/gtk-theme-config.svg' },
 }
 
 appmenu.System = {
@@ -97,6 +104,7 @@ appmenu.Appmenu = {
     { 'Graphics', appmenu.Graphics, '/usr/share/icons/Adwaita/256x256/legacy/applications-graphics.png' },
     { 'Internet', appmenu.Internet, '/usr/share/icons/Adwaita/48x48/legacy/applications-internet.png' },
     { 'Office', appmenu.Office, '/usr/share/icons/Adwaita/256x256/legacy/applications-office.png' },
+    { 'Multimedia', appmenu.Multimedia },
     { 'Settings', appmenu.Settings, '/usr/share/icons/Adwaita/48x48/legacy/applications-accessories.png' },
     { 'System', appmenu.System, '/usr/share/icons/Adwaita/48x48/legacy/applications-system.png' },
     { 'Miscellaneous', appmenu.Miscellaneous, '/usr/share/icons/Adwaita/48x48/legacy/applications-other.png' },

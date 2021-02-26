@@ -28,7 +28,8 @@ apps.default = {
     --launcher = "rofi -modi drun -show drun",
     launcher = "rofi -combi-modi window,drun -modi combi -show combi -config ~/.config/rofi/config.rasi -no-fixed-num-lines -display-window '' -display-drun '' -sort fzf -levenshstein-sort -lines 7 -run-command '/bin/zsh -c -i {cmd}'",
     lock = "slock",
-    screenshot = "gnome-screenshot",
+    screenshot = "notify-send 'selection will be saved to ~/tmp'",
+    notify = "scrot --freeze -se 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'",
     filebrowser = "thunar",
     browser = "firefox",
     editor = "nvim"
@@ -41,13 +42,14 @@ local run_on_start_up = {
    "unclutter",
    "sleep 2; feh --bg-fill ~/.wallpaper.jpg",
    "cmst -m",
-   "setxkbmap -option grp:rctrl_rshift_toggle gb,se",
+   "setxkbmap -option grp:lwin_toggle -layout gb,se",
    "unclutter --timeout 3 --jitter 20",
    "xbacklight -set 40",
    "xfce4-power-manager --restart",
    "thunar --daemon",
    "xscreensaver -no-splash",
-   "layout.sh"
+   "layout.sh",
+   "eve-audio-ctl.py -o speaker -i internal_mic -j",
 }
 
 

@@ -81,7 +81,7 @@ awesome.connect_signal("volume_change",
    function()
       -- set new volume value
       awful.spawn.easy_async_with_shell(
-         "amixer sget Master | grep 'Right:' | awk -F '[][]' '{print $2}'| sed 's/[^0-9]//g'",
+         "amixer -D cras sget Master | grep 'Mono' | awk -F '[][]' '{print $2}'| sed 's/[^0-9]//g'",
          function(stdout)
             volume_bar.value = tonumber(stdout)
          end,

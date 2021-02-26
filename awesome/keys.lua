@@ -23,8 +23,8 @@ require("awful.hotkeys_popup.keys")
 local apps = require("apps").default
 
 -- Define mod keys
-local modkey = "Mod1"
-local altkey = "Mod4"
+local modkey = "Mod4"
+local altkey = "Mod1"
 
 --Define module table
 local keys = {}
@@ -204,21 +204,21 @@ keys.globalkeys = gears.table.join(
           -- ALSA volume control
    awful.key({}, "XF86AudioRaiseVolume",
       function()
-         awful.spawn("amixer -D pulse sset Master 5%+", false)
+         awful.spawn("amixer -D cras sset Master 5%+", false)
          awesome.emit_signal("volume_change")
       end,
       {description = "volume up", group = "hotkeys"}
    ),
    awful.key({}, "XF86AudioLowerVolume",
       function()
-         awful.spawn("amixer -D pulse sset Master 5%-", false)
+         awful.spawn("amixer -D cras sset Master 5%-", false)
          awesome.emit_signal("volume_change")
       end,
       {description = "volume down", group = "hotkeys"}
    ),
    awful.key({}, "XF86AudioMute",
       function()
-         awful.spawn("amixer -D pulse set Master 1+ toggle", false)
+         awful.spawn("amixer -D cras set Master 1+ toggle", false)
          awesome.emit_signal("volume_change")
       end,
       {description = "toggle mute", group = "hotkeys"}
@@ -243,9 +243,10 @@ keys.globalkeys = gears.table.join(
    ),
 
     -- Screenshot on prtscn using scrot
-    awful.key({}, "Print",
+    awful.key({ modkey, "Shift" }, "s",
         function ()
-            awful.util.spawn(apps.screenshot, false)
+            awful.util.spawn(apps.screenshot, true)
+            awful.util.spawn(apps.notify, true)
         end
     ),
 
