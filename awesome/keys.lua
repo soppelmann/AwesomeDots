@@ -19,6 +19,7 @@ local dpi = beautiful.xresources.apply_dpi
 local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
+
 -- Default Applications
 local apps = require("apps").default
 
@@ -522,6 +523,8 @@ keys.globalkeys = gears.table.join(
 
 
 keys.clientkeys = gears.table.join(
+	
+
     -- toggle fullscreen
     awful.key({ modkey }, "f",
         function (c)

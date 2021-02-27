@@ -59,16 +59,17 @@ theme.titlebar_bg_focus = theme.titlebar_bg -- make titlebars not change color w
 
 -- Taglist
 theme.taglist_bg_empty = "#808080cc"
-theme.taglist_bg_occupied = '#16182190'
+--theme.taglist_bg_occupied = '#16182190'
 theme.taglist_bg_urgent = '#e91e6399'
-theme.taglist_bg_focus = theme.bg_normal
+theme.taglist_bg_focus = "#268DA7"
 theme.taglist_shape = gears.shape.rounded_bar
+--theme.taglist bg  = "#268DA7"
 
 -- Tasklist
 theme.tasklist_font = theme.font
 
-theme.tasklist_bg_normal = "#16182190"
-theme.tasklist_bg_focus = theme.bg_normal
+theme.tasklist_bg_normal = "#2F343E"
+theme.tasklist_bg_focus = "#16182190"
 theme.tasklist_bg_urgent = theme.bg_urgent
 theme.tasklist_bg_minimize = "#808080cc"
 

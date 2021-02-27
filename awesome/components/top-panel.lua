@@ -44,15 +44,15 @@ local taskbarWidth = screen.geometry.width / 25 * 17
 
 top_panel.create = function(s)
    local panel = awful.wibar({
-      --bg = "#283039",
-      bg = "#00000000",
+      bg = "#262A32",
+      --bg = "#00000000",
       --border_width = 0,
       border_width = 3,
-      --border_color = "#283039",
-      border_color = "#00000000",
+      border_color = "#262A32",
+      --border_color = "#00000000",
       screen = s,
       position = "top",
-      shape = gears.shape.rounded_bar,
+      --shape = gears.shape.rounded_bar,
       --shape = gears.shape.rounded_bar,
       height = beautiful.top_panel_height,
       width = s.geometry.width,
@@ -74,7 +74,7 @@ top_panel.create = function(s)
          {
                	wibox.layout.margin(wibox.widget.systray(true), 8, 8, 5, 5),
               	shape = gears.shape.rounded_bar,
-               	bg = "#283039",
+               	bg = "#262A32",
               	widget = wibox.container.background
          },
 	 vseparator,
@@ -82,7 +82,7 @@ top_panel.create = function(s)
 		wibox.layout.margin(cpu_widget({
 		enable_kill_button = true, }), 12, 12, 2, 2),
                	shape = gears.shape.rounded_bar,
-              	bg = "#283039",
+              	bg = "#262A32",
                	widget = wibox.container.background
          },
 	 vseparator,
@@ -91,7 +91,7 @@ top_panel.create = function(s)
             	show_current_level = true,
             	}), 12, 12, 2, 2),
                	shape = gears.shape.rounded_bar,
-              	bg = "#283039",
+              	bg = "#262A32",
                	widget = wibox.container.background
          },
 	 vseparator,
@@ -102,28 +102,28 @@ top_panel.create = function(s)
          	   step = 2,        
         	}, 8, 8, 5, 5),
                	shape = gears.shape.rounded_bar,
-              	bg = "#283039",
+              	bg = "#262A32",
                	widget = wibox.container.background
          },
          vseparator,
          {
 		wibox.layout.margin(mykeyboardlayout,  8, 8, 3, 3),
                	shape = gears.shape.rounded_bar,
-              	bg = "#283039",
+              	bg = "#262A32",
                	widget = wibox.container.background
          },
          vseparator,
          {
                	s.mylayoutbox,
                	shape = gears.shape.rounded_bar,
-               	bg = "#283039",
+               	bg = "#262A32",
                	widget = wibox.container.background
          },
          vseparator,
          {
                	calendar,
                	shape = gears.shape.rounded_bar,
-               	bg = "#283039",
+               	bg = "#262A32",
                	shape_clip = true,
                	widget = wibox.container.background
          },

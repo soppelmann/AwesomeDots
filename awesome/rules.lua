@@ -62,7 +62,7 @@ function rules.create(clientkeys, clientbuttons)
             type = {
                "dialog"
             }
-         }, properties = {floating = true}
+         }, properties = {floating = true, titlebars_enabled = false}
       },
 	
       -- Fullscreen clients  
@@ -97,6 +97,10 @@ function rules.create(clientkeys, clientbuttons)
          end
       },
 
+
+		-- VLC
+		{ rule = { class = "vlc" },
+        properties = { floating = true, ontop = true, titlebars_enabled = false } },
 
         -- Rofi
         {
