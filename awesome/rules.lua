@@ -99,8 +99,8 @@ function rules.create(clientkeys, clientbuttons)
 
 
 		-- VLC
-		{ rule = { class = "vlc" },
-        properties = { floating = true, ontop = true, titlebars_enabled = false } },
+		--{ rule = { class = "vlc" },
+        --properties = { floating = true, ontop = true, titlebars_enabled = false } },
 
         -- Rofi
         {

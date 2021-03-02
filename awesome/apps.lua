@@ -37,7 +37,7 @@ apps.default = {
 
 -- List of apps to start once on start-up
 local run_on_start_up = {
-    "picom --refresh-rate 60 -G -C --use-damage",
+   "picom --refresh-rate 60 -G -C --use-damage",
    "redshift -l 59:18",
    "unclutter",
    "sleep 2; feh --bg-fill ~/.wallpaper.jpg",
