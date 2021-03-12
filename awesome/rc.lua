@@ -35,6 +35,10 @@ require("components.notifications")
 -- Import Tag Settings
 local tags = require("tags")
 
+-- Volume widget
+volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+volume_widget_widget = volume_widget({display_notification = true})
+
 -- CPU widget
 cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 
@@ -156,9 +160,10 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
+
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu,
-			     	     width = 500, })
+									 width = 500, })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it

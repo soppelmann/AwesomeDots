@@ -99,11 +99,19 @@ top_panel.create = function(s)
 		wibox.layout.margin(brightness_widget{
          	   type = 'icon_and_text',
          	   program = 'xbacklight',
-         	   step = 2,        
+         	   step = 1,        
         	}, 8, 8, 5, 5),
                	shape = gears.shape.rounded_bar,
               	bg = "#262A32",
                	widget = wibox.container.background
+         },
+        
+		vseparator,
+         {
+		     volume_widget_widget,
+             shape = gears.shape.rounded_bar,
+             bg = "#262A3",
+             widget = wibox.container.background
          },
          vseparator,
          {

@@ -48,12 +48,14 @@ function rules.create(clientkeys, clientbuttons)
                "DTA",
                "copyq",
             },
-            class = {
-               "Nm-connection-editor"
+	    class = {
+               "Nm-connection-editor",
             },
             name = {
                "Event Tester",
-               "Steam Guard - Computer Authorization Required"
+               "Steam Guard - Computer Authorization Required",
+               "Figure",
+               "Plot",
             },
             role = {
                "pop-up",
@@ -62,7 +64,7 @@ function rules.create(clientkeys, clientbuttons)
             type = {
                "dialog"
             }
-         }, properties = {floating = true, titlebars_enabled = false}
+         }, properties = {floating = true}
       },
 	
       -- Fullscreen clients  
@@ -97,10 +99,14 @@ function rules.create(clientkeys, clientbuttons)
          end
       },
 
+	-- Catclock		
+	{ 
+        rule_any = { name = { "xclock" } },
+        properties = { titlebars_enabled=false, placement=awful.placement.top_right, floating=true, maximized = false, sticky=true, ontop = true  } },
 
 		-- VLC
-		--{ rule = { class = "vlc" },
-        --properties = { floating = true, ontop = true, titlebars_enabled = false } },
+		{ rule = { class = "vlc" },
+        properties = { floating=true, placement=awful.placement.centered, maximized = false, ontop = true, width = screen_width * 0.65, height = screen_height * 0.65  } },
 
         -- Rofi
         {

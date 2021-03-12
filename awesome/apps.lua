@@ -25,11 +25,14 @@ local apps = {}
 
 apps.default = {
     terminal = "alacritty",
+--    terminal = "xfce4-terminal",
     --launcher = "rofi -modi drun -show drun",
     launcher = "rofi -combi-modi window,drun -modi combi -show combi -config ~/.config/rofi/config.rasi -no-fixed-num-lines -display-window '' -display-drun '' -sort fzf -levenshstein-sort -lines 7 -run-command '/bin/zsh -c -i {cmd}'",
     lock = "slock",
     screenshot = "notify-send 'selection will be saved to ~/tmp'",
     notify = "scrot --freeze -se 'mv $f ~/tmp && xclip -selection clipboard -t image/png -i ~/tmp/$n'",
+    kblayout = '/home/getz/compiling/xkb-switch/switch.sh',
+    kbnotify = "xkb-switch -n",
     filebrowser = "thunar",
     browser = "firefox",
     editor = "nvim"
@@ -37,19 +40,20 @@ apps.default = {
 
 -- List of apps to start once on start-up
 local run_on_start_up = {
-   "picom --refresh-rate 60 -G -C --use-damage",
+   "picom --refresh-rate 60 -G -C --use-damage --experimental-backends",
    "redshift -l 59:18",
    "unclutter",
    "sleep 2; feh --bg-fill ~/.wallpaper.jpg",
    "cmst -m",
-   "setxkbmap -option grp:lwin_toggle -layout gb,se",
+   "setxkbmap -layout 'gb','se'",
    "unclutter --timeout 3 --jitter 20",
    "xbacklight -set 40",
    "xfce4-power-manager --restart",
    "thunar --daemon",
    "xscreensaver -no-splash",
    "layout.sh",
-   "eve-audio-ctl.py -o speaker -i internal_mic -j",
+   "xclock -mode cat -hl black -catcolor black -tiecolor violet",
+  -- "eve-audio-ctl.py -o speaker -i internal_mic -j",
 }
 
 

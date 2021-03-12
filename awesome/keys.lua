@@ -481,6 +481,19 @@ keys.globalkeys = gears.table.join(
         end,
         {description = "decrease the number of columns", group = "layout"}
     ),
+    -- =========================================
+    -- KBLAYOUT SELECTION
+    -- =========================================
+
+    -- select next layout
+    awful.key({ altkey }, "space",
+        function ()
+            awful.util.spawn(apps.kbnotify, true)
+            awful.util.spawn(apps.kblayout, true)
+            naughty.destroy_all_notifications()
+        end,
+        {description = "select next kblayout", group = "launcher"}
+    ),
 
     -- =========================================
     -- LAYOUT SELECTION

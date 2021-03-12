@@ -74,7 +74,7 @@ local function show_battery_warning()
       position = "top_right",
       bg = "#d32f2f",
       fg = "#EEE9EF",
-      width = 248
+      width = 348
    }
 end
 
